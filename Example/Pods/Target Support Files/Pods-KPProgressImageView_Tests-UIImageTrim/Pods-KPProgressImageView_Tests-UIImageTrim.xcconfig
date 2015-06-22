@@ -1,0 +1,1 @@
+PODS_KPPROGRESSIMAGEVIEW_TESTS_UIIMAGETRIM_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"

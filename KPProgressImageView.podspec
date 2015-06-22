@@ -32,7 +32,10 @@ Pod::Spec.new do |s|
     'KPProgressImageView' => ['Pod/Assets/*.png']
   }
 
+  s.dependency 'UIImageTrim', '1.02'
+
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
 end

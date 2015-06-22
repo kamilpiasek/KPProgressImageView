@@ -1,7 +1,9 @@
 PODS:
   - Expecta (1.0.0)
-  - KPProgressImageView (0.1.0)
+  - KPProgressImageView (0.1.0):
+    - UIImageTrim (= 1.02)
   - Specta (1.0.2)
+  - UIImageTrim (1.02)
 
 DEPENDENCIES:
   - Expecta
@@ -14,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  KPProgressImageView: 1a7699809be49df6e35a8cc14533acd2b2d95773
+  KPProgressImageView: cd903df32c459af8d3e819c9e75c664a0f3d6d9a
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
+  UIImageTrim: 6291b9cfb05bbc9ca0bb3e510aae4421de4ca5e4
 
 COCOAPODS: 0.37.2

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5CE93F9306236829476FB89"
+               BlueprintIdentifier = "C1DF1AE43E0E097BAA42EB9C"
                BuildableName = "KPProgressImageView.bundle"
                BlueprintName = "Pods-KPProgressImageView_Tests-KPProgressImageView-KPProgressImageView"
                ReferencedContainer = "container:Pods.xcodeproj">

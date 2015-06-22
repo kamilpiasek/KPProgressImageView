@@ -21,5 +21,10 @@
     "KPProgressImageView": [
       "Pod/Assets/*.png"
     ]
+  },
+  "dependencies": {
+    "UIImageTrim": [
+      "1.02"
+    ]
   }
 }
