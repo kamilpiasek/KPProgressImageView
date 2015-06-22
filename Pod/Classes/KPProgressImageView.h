@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    KPProgressTopToBottom,
-    KPProgressBottomToTop,
-    KPProgressLeftToRight,
-    KPProgressRightToLeft,
+    KPProgressDirectionTopToBottom,
+    KPProgressDirectionBottomToTop,
+    KPProgressDirectionLeftToRight,
+    KPProgressDirectionRightToLeft,
 } KPProgressDirection;
 
 @interface KPProgressImageView : UIImageView

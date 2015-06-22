@@ -40,6 +40,7 @@
 
 -(void)setup{
     self.progressPercent = 0.f;
+    self.progressDirection = KPProgressDirectionRightToLeft;
 }
 
 -(void)setImage:(UIImage *)image{
@@ -52,32 +53,53 @@
     [self setupImage:self.image];
 }
 
+-(void)setProgressDirection:(KPProgressDirection)progressDirection{
+    _progressDirection = progressDirection;
+    [self setupImage:self.image];
+}
+
 -(void)detectImageContentInsets:(UIImage *)image{
     self.imageContentInsets = [image transparencyInsetsRequiringFullOpacity:YES];
 }
 
 -(void)setupImage:(UIImage *)image{
-    CGFloat divideLine = [self calculateDivideLineForImage:image];
-    
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0f);
     UIColor* tintColor = self.tintColor;
     [tintColor setFill];
-    CGRect rect = CGRectMake(0.f, 0.f, image.size.width, image.size.height);
-    UIRectFill(rect);
+    CGRect fullImageRect = CGRectMake(0.f, 0.f, image.size.width, image.size.height);
+    UIRectFill(fullImageRect);
     [self.progressTintColor setFill];
-    CGRect rect2 = CGRectMake(0.f, divideLine, rect.size.width, rect.size.height-divideLine);
-    UIRectFill(rect2);
-    [image drawInRect:rect blendMode:kCGBlendModeDestinationIn alpha:1.0f];
+    CGRect progressRect = [self calculateprogressRectForImage:image];
+    UIRectFill(progressRect);
+    [image drawInRect:fullImageRect blendMode:kCGBlendModeDestinationIn alpha:1.0f];
     UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [super setImage:tintedImage];
 }
 
-//-(void)drawProgressOnImage{
-//
-//}
-
--(CGFloat)calculateDivideLineForImage:(UIImage *)image{
-    return (image.size.height - (self.imageContentInsets.top + self.imageContentInsets.bottom))*(1.f-self.progressPercent) + self.imageContentInsets.top;
+-(CGRect)calculateprogressRectForImage:(UIImage *)image{
+    
+    
+    switch (self.progressDirection) {
+        case KPProgressDirectionBottomToTop:{
+            CGFloat divideLine = (image.size.height - (self.imageContentInsets.top + self.imageContentInsets.bottom))*(1.f-self.progressPercent) + self.imageContentInsets.top;
+            return CGRectMake(0.f, divideLine, image.size.width, image.size.height-divideLine);
+        }
+        case KPProgressDirectionTopToBottom:{
+            CGFloat divideLine = (image.size.height - (self.imageContentInsets.top + self.imageContentInsets.bottom))*self.progressPercent + self.imageContentInsets.top;
+            return CGRectMake(0.f, 0.f, image.size.width, divideLine);
+        }
+        case KPProgressDirectionRightToLeft:{
+            CGFloat divideLine = (image.size.width - (self.imageContentInsets.right + self.imageContentInsets.left))*(1.f-self.progressPercent) + self.imageContentInsets.left;
+            return CGRectMake(divideLine, 0.f, image.size.width-divideLine, image.size.height);
+        }
+        case KPProgressDirectionLeftToRight:{
+            CGFloat divideLine = (image.size.width - (self.imageContentInsets.right + self.imageContentInsets.left))*self.progressPercent + self.imageContentInsets.left;
+            return CGRectMake(0.f, 0.f, divideLine, image.size.height);
+        }
+            
+        default:
+            break;
+    }
 }
 @end
