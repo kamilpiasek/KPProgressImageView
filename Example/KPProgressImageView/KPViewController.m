@@ -17,7 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.imageView.tintColor = [UIColor greenColor];
+    self.imageView.progressTintColor = [UIColor redColor];
+    self.imageView.image = [UIImage imageNamed:@"progressIcon.png"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sliderValueChanged:(id)sender {
+    self.imageView.progressPercent = self.slider.value;
+}
 @end
