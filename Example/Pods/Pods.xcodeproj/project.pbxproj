@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0355522465437647988F73C0 /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B50E6E3C34630C31E07066E /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03BBBC125654E5D8C4243C34 /* UIImage+DoubleTint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4401AE8B8EF31E66F8561A /* UIImage+DoubleTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06158334D253F18B4FA8E2A5 /* SPTTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCB4BD0DCB4A4F5D81B3AA4 /* SPTTestSuite.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0AF755BF4BB8733CC5EF48EE /* EXPMatchers+beGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = 3778B2207049177FAD1108B3 /* EXPMatchers+beGreaterThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0D42434C500C009B9B36D9AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75DBDF1391DEA9EDAFBD49 /* UIKit.framework */; };
@@ -58,7 +57,6 @@
 		5A7D79961BB6318E6CD83E99 /* EXPMatchers+beginWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4720B3813B83778BF8F65B /* EXPMatchers+beginWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5C1C4ED0B51347590E6933F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3499060728437F3E394A3571 /* Foundation.framework */; };
 		5CB12203EFC82D33EE48C322 /* Pods-KPProgressImageView_Tests-UIImageTrim-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C09FA3730683D3CB3B53E5 /* Pods-KPProgressImageView_Tests-UIImageTrim-dummy.m */; };
-		5D8A50248A32C3A003D7506E /* UIImage+DoubleTint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4401AE8B8EF31E66F8561A /* UIImage+DoubleTint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D98D37A80F7A599A01300DF /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = B52383C0A4BFF50D4AD789D5 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E0AEC7E5D85BE6133AE656E /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 457F7B5129D6FFAAF4CB713A /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ECF900AE5C71D786E5A591C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75DBDF1391DEA9EDAFBD49 /* UIKit.framework */; };
@@ -89,9 +87,7 @@
 		80A41941948FC2D553A3C629 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3499060728437F3E394A3571 /* Foundation.framework */; };
 		81FCAD5E9FAB43F8E5D80CC8 /* Pods-KPProgressImageView_Tests-Specta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5E429AA7FDC2E2CCD038D /* Pods-KPProgressImageView_Tests-Specta-dummy.m */; };
 		82989495CA36A6094F47D4E4 /* EXPMatchers+match.m in Sources */ = {isa = PBXBuildFile; fileRef = E322FAEA8E4F4528E66E2359 /* EXPMatchers+match.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8358848763235A6B0222E505 /* UIImage+DoubleTint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE250214C5C3998AD5B5BECE /* UIImage+DoubleTint.m */; };
 		86445521F859135D28973AC2 /* Pods-KPProgressImageView_Example-KPProgressImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BF4565DCC4320289859D79 /* Pods-KPProgressImageView_Example-KPProgressImageView-dummy.m */; };
-		869A4C6C3F8131C05CCF7402 /* UIImage+DoubleTint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE250214C5C3998AD5B5BECE /* UIImage+DoubleTint.m */; };
 		87064C3A9BC9501D83CFFC93 /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9C2B2F2337B93FB6CB89A6 /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879E0F5E6C98FF7E7A842BEB /* KPProgressImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D5F50BD43B6FABA1E48D70 /* KPProgressImageView.m */; };
 		88E8BADFDBC17C9002E63BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3499060728437F3E394A3571 /* Foundation.framework */; };
@@ -250,7 +246,6 @@
 		277B97271FF3A58B6DE45457 /* Pods-KPProgressImageView_Tests-Expecta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KPProgressImageView_Tests-Expecta-dummy.m"; sourceTree = "<group>"; };
 		28FDB1B19DD8C974E22DAE5E /* Pods-KPProgressImageView_Tests-KPProgressImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-KPProgressImageView_Tests-KPProgressImageView-prefix.pch"; path = "../Pods-KPProgressImageView_Tests-KPProgressImageView/Pods-KPProgressImageView_Tests-KPProgressImageView-prefix.pch"; sourceTree = "<group>"; };
 		2928129E9EE4E195A18A84CB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2A4401AE8B8EF31E66F8561A /* UIImage+DoubleTint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+DoubleTint.h"; sourceTree = "<group>"; };
 		2C222D64E7A47587AD24C031 /* SPTCompiledExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCompiledExample.h; path = Specta/Specta/SPTCompiledExample.h; sourceTree = "<group>"; };
 		2C23409F8FF293B87C56C609 /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
 		32292613DC54BC69603E4496 /* SpectaUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaUtility.m; path = Specta/Specta/SpectaUtility.m; sourceTree = "<group>"; };
@@ -340,7 +335,6 @@
 		A9FC153D3BD8476CE04EF170 /* Pods-KPProgressImageView_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KPProgressImageView_Example-environment.h"; sourceTree = "<group>"; };
 		AB6FFEB2C762B45D0EF512CC /* EXPMatchers+beLessThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThan.m"; path = "Expecta/Matchers/EXPMatchers+beLessThan.m"; sourceTree = "<group>"; };
 		AC9AEBE34324619DC2881E30 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE250214C5C3998AD5B5BECE /* UIImage+DoubleTint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DoubleTint.m"; sourceTree = "<group>"; };
 		AFD50F41E683E8007B8A7F45 /* EXPMatchers+match.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+match.h"; path = "Expecta/Matchers/EXPMatchers+match.h"; sourceTree = "<group>"; };
 		B0A14F27D37316817836E425 /* EXPMatchers+beInstanceOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInstanceOf.m"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.m"; sourceTree = "<group>"; };
 		B0E63410B540B1B57193CEBA /* Pods-KPProgressImageView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KPProgressImageView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -832,8 +826,6 @@
 			children = (
 				146714D644FB1E4DDC012C29 /* KPProgressImageView.h */,
 				E3D5F50BD43B6FABA1E48D70 /* KPProgressImageView.m */,
-				2A4401AE8B8EF31E66F8561A /* UIImage+DoubleTint.h */,
-				AE250214C5C3998AD5B5BECE /* UIImage+DoubleTint.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -881,7 +873,6 @@
 			files = (
 				21C95ED02F3C37905AE205D9 /* KPProgressImageView.h in Headers */,
 				327D6E49082C584A7B805988 /* Pods-KPProgressImageView_Tests-KPProgressImageView-umbrella.h in Headers */,
-				03BBBC125654E5D8C4243C34 /* UIImage+DoubleTint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,7 +929,6 @@
 			files = (
 				D388360D8E13EF415E0B3856 /* KPProgressImageView.h in Headers */,
 				3AEDC02ADBA1463A33BB4F45 /* Pods-KPProgressImageView_Example-KPProgressImageView-umbrella.h in Headers */,
-				5D8A50248A32C3A003D7506E /* UIImage+DoubleTint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,7 +1214,6 @@
 			files = (
 				879E0F5E6C98FF7E7A842BEB /* KPProgressImageView.m in Sources */,
 				86445521F859135D28973AC2 /* Pods-KPProgressImageView_Example-KPProgressImageView-dummy.m in Sources */,
-				869A4C6C3F8131C05CCF7402 /* UIImage+DoubleTint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,7 +1280,6 @@
 			files = (
 				D7BAE686E24DF465D5F8D74E /* KPProgressImageView.m in Sources */,
 				188BE2289DE239EB79EC8E31 /* Pods-KPProgressImageView_Tests-KPProgressImageView-dummy.m in Sources */,
-				8358848763235A6B0222E505 /* UIImage+DoubleTint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
