@@ -1,0 +1,6 @@
+framework module KPProgressImageView {
+  umbrella header "Pods-KPProgressImageView_Example-KPProgressImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

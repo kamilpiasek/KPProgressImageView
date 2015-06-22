@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (1.0.0)
+  - KPProgressImageView (0.1.0)
+  - Specta (1.0.2)
+
+DEPENDENCIES:
+  - Expecta
+  - KPProgressImageView (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  KPProgressImageView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
+  KPProgressImageView: 1a7699809be49df6e35a8cc14533acd2b2d95773
+  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
+
+COCOAPODS: 0.37.2
