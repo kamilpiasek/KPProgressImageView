@@ -17,9 +17,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.imageView.tintColor = [UIColor greenColor];
-    self.imageView.progressTintColor = [UIColor redColor];
-    self.imageView.image = [UIImage imageNamed:@"progressIcon.png"];
+    
+    [self configureCommonParams:self.topLeft];
+    [self configureCommonParams:self.topRight];
+    [self configureCommonParams:self.bottomLeft];
+    [self configureCommonParams:self.bottomRight];
+    
+    self.topLeft.progressDirection = KPProgressDirectionLeftToRight;
+    self.topRight.progressDirection = KPProgressDirectionRightToLeft;
+    self.bottomLeft.progressDirection = KPProgressDirectionTopToBottom;
+    self.bottomRight.progressDirection = KPProgressDirectionBottomToTop;
+}
+
+-(void)configureCommonParams:(KPProgressImageView*)imageView{
+    imageView.tintColor = [UIColor grayColor];
+    imageView.progressTintColor = [UIColor redColor];
+    imageView.image = [UIImage imageNamed:@"progressIcon"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,6 +42,9 @@
 }
 
 - (IBAction)sliderValueChanged:(id)sender {
-    self.imageView.progressPercent = self.slider.value;
+    self.topLeft.progressPercent = self.slider.value;
+    self.topRight.progressPercent = self.slider.value;
+    self.bottomLeft.progressPercent = self.slider.value;
+    self.bottomRight.progressPercent = self.slider.value;
 }
 @end
