@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 Usage is very simple.
 
-* Add KPProgressImageView to your view as you usually do with any UIImageView. 
+* Add `KPProgressImageView` to your view as you usually do with any UIImageView. 
 * Set `tintColor` property to provide color for base image tint. 
 * Assign value to `progressTintColor` property to set tint color for part of image that will show your current progress. 
 * To provide actual progress value modify `progressPercent` property (notice it's values are between 0.f and 1.f). 
