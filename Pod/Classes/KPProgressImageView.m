@@ -60,13 +60,9 @@
 
 -(void)detectImageContentInsets:(UIImage *)image{
     CGFloat screenScale = CGImageGetWidth(image.CGImage)/image.size.width;
-    NSLog(@"%f",screenScale);
     self.imageContentInsets = [image transparencyInsetsRequiringFullOpacity:NO];
     
     self.imageContentInsets = UIEdgeInsetsMake(self.imageContentInsets.top/screenScale, self.imageContentInsets.left/screenScale, self.imageContentInsets.bottom/screenScale, self.imageContentInsets.right/screenScale);
-    
-    
-
 }
 
 -(void)setupImage:(UIImage *)image{
@@ -88,8 +84,6 @@
 }
 
 -(CGRect)calculateprogressRectForImage:(UIImage *)image{
-    
-    
     switch (self.progressDirection) {
         case KPProgressDirectionBottomToTop:{
             CGFloat divideLine = (image.size.height - (self.imageContentInsets.top + self.imageContentInsets.bottom))*(1.f-self.progressPercent) + self.imageContentInsets.top;
