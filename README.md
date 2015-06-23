@@ -9,7 +9,17 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Usage is very simple.
+
+* Add KPProgressImageView to your view as you usually do with any UIImageView. 
+* Set `tintColor` property to provide color for base image tint. 
+* Assign value to `progressTintColor` property to set tint color for part of image that will show your current progress. 
+* To provide actual progress value modify `progressPercent` property (notice it's values are between 0.f and 1.f). 
+* Using `KPProgressDirection` enum you may optionally set progress direction (by default it's set to `KPProgressDirectionBottomToTop`).
+
 ## Requirements
+
+[UIImageTrim](https://github.com/pushpak/UIImageTrim) was used in KPProgressImageView to calculate actual image content insets.
 
 ## Installation
 
@@ -20,8 +30,8 @@ it, simply add the following line to your Podfile:
 pod "KPProgressImageView"
 ```
 
-##Visual themo
-Below you can see simple demo of four image progressbars, each of different direction. Slider modifies current progress from 0 to 100%.
+##Visual demo
+Below you can see simple demo of four `KPProgressImageView`'s, each of different direction. Slider modifies current progress from 0 to 100%.
 
 ![Demo](http://s23.postimg.org/xax5raepn/Demo.gif)
 
