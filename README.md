@@ -22,7 +22,7 @@ pod "KPProgressImageView"
 
 ##Visual themo
 Below you can see simple demo of four image progressbars, each of different direction. Slider modifies current progress from 0 to 100%.
-![Demo](http://postimg.org/image/48ivogsfr/)
+![Demo](http://s23.postimg.org/xax5raepn/Demo.gif)
 ## Author
 
 Kamil Piasek, kamil.piasek@gmail.com
