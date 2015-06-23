@@ -51,9 +51,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Expecta.framework'
   install_framework 'KPProgressImageView.framework'
   install_framework 'Specta.framework'
+  install_framework 'UIImageTrim.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Expecta.framework'
   install_framework 'KPProgressImageView.framework'
   install_framework 'Specta.framework'
+  install_framework 'UIImageTrim.framework'
 fi

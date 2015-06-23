@@ -1,0 +1,1 @@
+../../../UIImageTrim/Source/UIImage+Trim.h

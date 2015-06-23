@@ -7,7 +7,14 @@
 //
 
 @import UIKit;
+#import <KPProgressImageView/KPProgressImageView.h>
 
 @interface KPViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet KPProgressImageView *topLeft;
+@property (weak, nonatomic) IBOutlet KPProgressImageView *topRight;
+@property (weak, nonatomic) IBOutlet KPProgressImageView *bottomLeft;
+@property (weak, nonatomic) IBOutlet KPProgressImageView *bottomRight;
+- (IBAction)sliderValueChanged:(id)sender;
 
 @end

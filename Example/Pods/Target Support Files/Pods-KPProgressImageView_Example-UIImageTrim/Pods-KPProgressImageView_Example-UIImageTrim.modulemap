@@ -1,0 +1,6 @@
+framework module UIImageTrim {
+  umbrella header "Pods-KPProgressImageView_Example-UIImageTrim-umbrella.h"
+
+  export *
+  module * { export * }
+}

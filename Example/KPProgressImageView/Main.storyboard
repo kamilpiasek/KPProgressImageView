@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +18,77 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0mc-Of-kUF" userLabel="TopLeft" customClass="KPProgressImageView">
+                                <rect key="frame" x="0.0" y="20" width="295" height="260"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyA-mC-bwq" userLabel="TopRight" customClass="KPProgressImageView">
+                                <rect key="frame" x="305" y="20" width="295" height="260"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SBO-oT-XDk" userLabel="BottomLeft" customClass="KPProgressImageView">
+                                <rect key="frame" x="0.0" y="290" width="295" height="260"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0l-gh-xEe" userLabel="BottomRight" customClass="KPProgressImageView">
+                                <rect key="frame" x="305" y="290" width="295" height="260"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2iC-LT-wYz">
+                                <rect key="frame" x="34" y="570" width="532" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="whP-gf-Uak" eventType="valueChanged" id="HuI-nL-UHA"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="S0l-gh-xEe" secondAttribute="trailing" constant="-16" id="1U7-1t-it3"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="top" secondItem="SBO-oT-XDk" secondAttribute="bottom" constant="10" id="261-bW-6jg"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="height" secondItem="0mc-Of-kUF" secondAttribute="height" id="7Fx-PN-mPP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2iC-LT-wYz" secondAttribute="trailing" constant="20" id="7mw-CR-hdV"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="width" multiplier="0.5" id="8Ry-51-oQ3"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="top" secondItem="HyA-mC-bwq" secondAttribute="bottom" constant="10" id="9GT-eb-AH6"/>
+                            <constraint firstItem="HyA-mC-bwq" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="BLA-Zn-eWa"/>
+                            <constraint firstItem="0mc-Of-kUF" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="BqV-i4-H2P"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="20" id="Eu1-xG-gOq"/>
+                            <constraint firstItem="SBO-oT-XDk" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="-16" id="Gbt-DF-sxA"/>
+                            <constraint firstAttribute="centerX" secondItem="2iC-LT-wYz" secondAttribute="centerX" id="KQL-oe-al2"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="leading" secondItem="SBO-oT-XDk" secondAttribute="trailing" constant="10" id="Lsf-q9-jBx"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="top" secondItem="S0l-gh-xEe" secondAttribute="bottom" constant="10" id="MB6-F6-Blk"/>
+                            <constraint firstItem="0mc-Of-kUF" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="-16" id="N9x-ni-mgj"/>
+                            <constraint firstItem="SBO-oT-XDk" firstAttribute="top" secondItem="0mc-Of-kUF" secondAttribute="bottom" constant="10" id="Nny-6e-6bc"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="width" secondItem="HyA-mC-bwq" secondAttribute="width" id="PDX-8n-zV8"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="height" secondItem="TpU-gO-2f1" secondAttribute="height" multiplier="0.5" id="QsO-mL-ANQ"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="height" secondItem="HyA-mC-bwq" secondAttribute="height" id="T9j-8Z-kjR"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="centerX" secondItem="S0l-gh-xEe" secondAttribute="centerX" id="Vh9-FT-vKa"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="2iC-LT-wYz" secondAttribute="bottom" id="Wfm-xb-qUL"/>
+                            <constraint firstItem="HyA-mC-bwq" firstAttribute="leading" secondItem="0mc-Of-kUF" secondAttribute="trailing" constant="10" id="acf-X3-ZBL"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="top" secondItem="SBO-oT-XDk" secondAttribute="bottom" constant="20" id="aol-Ty-vMP"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="height" secondItem="SBO-oT-XDk" secondAttribute="height" id="b8p-AN-D9h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HyA-mC-bwq" secondAttribute="trailing" constant="-16" id="iSt-p6-R1q"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="width" secondItem="0mc-Of-kUF" secondAttribute="width" id="oLx-Ot-nZa"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="p6G-xQ-y3W"/>
+                            <constraint firstItem="2iC-LT-wYz" firstAttribute="top" secondItem="S0l-gh-xEe" secondAttribute="bottom" constant="20" id="r0H-M5-a9t"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="280" id="tN9-Uz-aeT"/>
+                            <constraint firstItem="S0l-gh-xEe" firstAttribute="width" secondItem="SBO-oT-XDk" secondAttribute="width" id="yRT-tD-HbX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Ry-51-oQ3"/>
+                                <exclude reference="QsO-mL-ANQ"/>
+                                <exclude reference="p6G-xQ-y3W"/>
+                                <exclude reference="tN9-Uz-aeT"/>
+                                <exclude reference="261-bW-6jg"/>
+                                <exclude reference="MB6-F6-Blk"/>
+                                <exclude reference="Vh9-FT-vKa"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomLeft" destination="SBO-oT-XDk" id="6P4-GP-2jB"/>
+                        <outlet property="bottomRight" destination="S0l-gh-xEe" id="Pg4-Xt-ESz"/>
+                        <outlet property="slider" destination="2iC-LT-wYz" id="kHv-JK-wv9"/>
+                        <outlet property="topLeft" destination="0mc-Of-kUF" id="Qgz-Qd-T5Z"/>
+                        <outlet property="topRight" destination="HyA-mC-bwq" id="6r8-P4-ovg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
