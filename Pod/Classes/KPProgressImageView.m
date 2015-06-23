@@ -40,7 +40,7 @@
 
 -(void)setup{
     self.progressPercent = 0.f;
-    self.progressDirection = KPProgressDirectionRightToLeft;
+    self.progressDirection = KPProgressDirectionLeftToRight;
 }
 
 -(void)setImage:(UIImage *)image{
@@ -59,10 +59,20 @@
 }
 
 -(void)detectImageContentInsets:(UIImage *)image{
-    self.imageContentInsets = [image transparencyInsetsRequiringFullOpacity:YES];
+    CGFloat screenScale = CGImageGetWidth(image.CGImage)/image.size.width;
+    NSLog(@"%f",screenScale);
+    self.imageContentInsets = [image transparencyInsetsRequiringFullOpacity:NO];
+    
+    self.imageContentInsets = UIEdgeInsetsMake(self.imageContentInsets.top/screenScale, self.imageContentInsets.left/screenScale, self.imageContentInsets.bottom/screenScale, self.imageContentInsets.right/screenScale);
+    
+    
+
 }
 
 -(void)setupImage:(UIImage *)image{
+    if(!image){
+        return;
+    }
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0f);
     UIColor* tintColor = self.tintColor;
     [tintColor setFill];
