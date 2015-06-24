@@ -40,7 +40,7 @@
 
 -(void)setup{
     self.progressPercent = 0.f;
-    self.progressDirection = KPProgressDirectionLeftToRight;
+    self.progressDirection = KPProgressDirectionBottomToTop;
 }
 
 -(void)setImage:(UIImage *)image{
