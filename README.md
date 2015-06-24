@@ -15,7 +15,7 @@ Usage is very simple.
 * Set `tintColor` property to provide color for base image tint. 
 * Assign value to `progressTintColor` property to set tint color for part of image that will show your current progress. 
 * To provide actual progress value modify `progressPercent` property (notice it's values are between 0.f and 1.f). 
-* Using `KPProgressDirection` enum you may optionally set progress direction (by default it's set to `KPProgressDirectionBottomToTop`).
+* Using `KPProgressDirection` enum you may optionally set progress direction (by default it's set to `KPProgressDirectionLeftToRight`).
 
 ## Requirements
 
